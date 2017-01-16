@@ -1,9 +1,6 @@
 <html>
 <head>
-    <link rel= stylesheet href= "bootstrap/css/bootstrap.css">
-    <script src="jquery-2.2.1.js"></script>
-    <script type= "text/javascript" src="bootstrap/js/bootstrap.js"></script>
-    <link rel= stylesheet href= "bootstrap/css/bootstrap.min.css">
+    
 </head>
 </head>
 <body>
@@ -43,6 +40,16 @@
                             "AMOUNT"                            => $bill_total,
                             "RESPONSE_TYPE"                     => '3',
                             "SIGNATURE"                         => $signaturecc,
+                            "MREF1"                   => "",
+                            "MREF2"                   => "",     
+                            "MREF3"                   => "",
+                            "MREF4"                   => "",
+                            "MREF5"                   => "",
+                            "MREF6"                   => "",
+                            "MREF7"                   => "",
+                            "MREF8"                   => "",
+                            "MREF9"                   => "",
+                            "MREF10"                  => "",
                 );
                 
                 $post_string = http_build_query($post);
