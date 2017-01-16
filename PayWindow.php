@@ -1,9 +1,5 @@
 <html>
 <head>
-    <link rel= stylesheet href= "bootstrap/css/bootstrap.css">
-    <script src="jquery-2.2.1.js"></script>
-    <script type= "text/javascript" src="bootstrap/js/bootstrap.js"></script>
-    <link rel= stylesheet href= "bootstrap/css/bootstrap.min.css">
 
     <script>
         function generateTranID(form){
@@ -35,7 +31,9 @@
         <div class="jumbotron">
         <h1>Payment Window</h1>
         </div>
-
+        <?php 
+        print_r($_POST)
+        ?>
         <form action="" method="post" id="theForm" name="theForm">
             <p>Merchant ID <input type="text" name="merchant_id" class="form-control" value="MI_test" required></p>
             <p>Password <input type="password" name="password" class="form-control" value="tjzga" required></p>
@@ -64,7 +62,8 @@
                 $signaturecc=sha1('##'.strtoupper($merchant_id).'##'.strtoupper($password).'##'.$merchant_tranid.'##'.$amount.'##'.'0'.'##');
 
 
-                $post = array(                             
+                $post = array(                  
+                          "LANG"                    => "",           
                           "MERCHANTID"              => $merchant_id,                                    
                           "PAYMENT_METHOD"          => '1',
                           "MERCHANT_TRANID"         => $merchant_tranid,       
@@ -73,12 +72,11 @@
                           "CUSTNAME"                => $custname,
                           "CUSTEMAIL"               => $custemail,                                           
                           "DESCRIPTION"             => $desc,
-                          "RETURN_URL"              => 'http://localhost/txn_office/merchant_return_page.php',
-                          "SIGNATURE"               => $signaturecc,
-                          "MREF1"                   => "Coklat Panas",                    
-                          //"PYMT_IND"           => 'card_range_ind',
-                          //"PYMT_CRITERIA"         => 'bca_only',
-                          /*"BILLING_ADDRESS"           => '',
+                          "RETURN_URL"              => 'http://localhost:8080/sandbox/assets/nativecredit/PayWindow.php',
+                          "SIGNATURE"               => $signaturecc,                
+                          "PYMT_IND"                => "",
+                          "PYMT_CRITERIA"           => "",
+                          "BILLING_ADDRESS"           => '',
                           "BILLING_ADDRESS_CITY"             => '',
                           "BILLING_ADDRESS_REGION"      => '',
                           "BILLING_ADDRESS_STATE"       => '',
@@ -91,12 +89,35 @@
                           "SHIPPING_ADDRESS_STATE"      => '',
                           "SHIPPING_ADDRESS_POSCODE"        => '',
                           "SHIPPING_ADDRESS_COUNTRY_CODE"   => '',
-                          "SHIPPINGCOST"            => '1000.00',
-                          "PHONE_NO"                => '',*/      
+                          "SHIPPINGCOST"            => "",
+                          "PHONE_NO"                => '', 
+                          "MREF1"                   => "",
+                          "MREF2"                   => "",     
+                          "MREF3"                   => "",
+                          "MREF4"                   => "",
+                          "MREF5"                   => "",
+                          "MREF6"                   => "",
+                          "MREF7"                   => "",
+                          "MREF8"                   => "",
+                          "MREF9"                   => "",
+                          "MREF10"                  => "",
+                          "MPARAM1"                 => "",
+                          "MPARAM2"                 => "",
+                          "CUSTOMER_REF"            => "",
+                          "FRISK1"                    => "", 
+                          "FRISK2"                    => "", 
+                          "LANG"                    => "", 
+                          "DOMICILE_ADDRESS"        => "",
+                          "DOMICILE_ADDRESS_CITY"        => "",
+                          "DOMICILE_ADDRESS_REGION"        => "",
+                          "DOMICILE_ADDRESS_STATE"        => "",
+                          "DOMICILE_ADDRESS_POSCODE"        => "",
+                          "DOMICILE_ADDRESS_COUNTRY_CODE"        => "",
+                          "DOMICILE_PHONE_NO"        => "",
+                          "handshake_url"        => "",
+                          "handshake_param"        => "",
+
                 );
-                echo "<div class='alert alert-success' style='text-transform:uppercase;' >";
-                print_r($post);
-                echo "</div>";
 
                 $string = '<form method="post" name="form" action="https://ucdev.faspay.co.id/payment/PaymentWindow.jsp">';
                 if ($post != null) {
