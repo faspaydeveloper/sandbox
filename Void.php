@@ -1,9 +1,5 @@
 <html>
 <head>
-    <link rel= stylesheet href= "bootstrap/css/bootstrap.css">
-    <script src="jquery-2.2.1.js"></script>
-    <script type= "text/javascript" src="bootstrap/js/bootstrap.js"></script>
-    <link rel= stylesheet href= "bootstrap/css/bootstrap.min.css">
 </head>
 </head>
 <body>
