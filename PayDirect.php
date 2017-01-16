@@ -1,9 +1,5 @@
 <html>
 <head>
-    <link rel= stylesheet href= "bootstrap/css/bootstrap.css">
-    <script src="jquery-2.2.1.js"></script>
-    <script type= "text/javascript" src="bootstrap/js/bootstrap.js"></script>
-    <link rel= stylesheet href= "bootstrap/css/bootstrap.min.css">
 </head>
 </head>
 <body>
@@ -12,6 +8,10 @@
         <h1>Payment Direct</h1>
         </div>
 
+        <?php 
+               print_r($_GET);
+            
+        ?>
         <form action="" method="post" id="theForm" name="theForm">
             <p>Transaction Type
               <select name="transaction_type" class="form-control">
@@ -118,8 +118,8 @@
                         "TRANSACTIONTYPE"         => $transaction_type,              
                         "MERCHANTID"              => $mid,                                    
                         "MERCHANT_TRANID"         => $trx_id,  
-                        //"PYMT_IND"                => 'card_range_ind',
-                        //"PYMT_CRITERIA"           => 'bca_only',     
+                        "PYMT_IND"                => "",
+                        "PYMT_CRITERIA"           => "",     
                         "CURRENCYCODE"            => 'IDR',
                         "AMOUNT"                  => $bill_total,
                         "SIGNATURE"               => $signaturecc,
@@ -128,7 +128,7 @@
                         "SHOPPER_IP"              => '202.153.30.118',                                           
                         "DESCRIPTION"             => $desc,
                         "RESPONSE_TYPE"           => '1', 
-                        "RETURN_URL"              => 'http://localhost/txn_office/merchant_return_page.php',
+                        "RETURN_URL"              => 'http://localhost:8080/sandbox/assets/nativecredit/PayDirect.php',
                         "CARDNO"                 => $card_no,
                         "CARDNAME"               => $card_name,
                         "CARDTYPE"               => $card_type,
@@ -136,21 +136,46 @@
                         "EXPIRYMONTH"            => $expiry_month,
                         "EXPIRYYEAR"             => $expiry_year,
                         "CARD_ISSUER_BANK_COUNTRY_CODE"   => $country,
-                        /*"BILLING_ADDRESS"           => '',
-                        "BILLING_ADDRESS_CITY"             => '',
-                        "BILLING_ADDRESS_REGION"      => '',
-                        "BILLING_ADDRESS_STATE"       => '',
-                        "BILLING_ADDRESS_POSCODE"     => '',
-                        "BILLING_ADDRESS_COUNTRY_CODE"        => '',
-                        "RECEIVER_NAME_FOR_SHIPPING"      => '',
-                        "SHIPPING_ADDRESS"            => '',
-                        "SHIPPING_ADDRESS_CITY"       => '',
-                        "SHIPPING_ADDRESS_REGION"     => '',
-                        "SHIPPING_ADDRESS_STATE"      => '',
-                        "SHIPPING_ADDRESS_POSCODE"        => '',
-                        "SHIPPING_ADDRESS_COUNTRY_CODE"   => '',
-                        "SHIPPINGCOST"            => '1000.00',
-                        "PHONE_NO"                => '',*/
+                        "BILLING_ADDRESS"           => '',
+                          "BILLING_ADDRESS_CITY"             => '',
+                          "BILLING_ADDRESS_REGION"      => '',
+                          "BILLING_ADDRESS_STATE"       => '',
+                          "BILLING_ADDRESS_POSCODE"     => '',
+                          "BILLING_ADDRESS_COUNTRY_CODE"        => '',
+                          "RECEIVER_NAME_FOR_SHIPPING"      => '',
+                          "SHIPPING_ADDRESS"            => '',
+                          "SHIPPING_ADDRESS_CITY"       => '',
+                          "SHIPPING_ADDRESS_REGION"     => '',
+                          "SHIPPING_ADDRESS_STATE"      => '',
+                          "SHIPPING_ADDRESS_POSCODE"        => '',
+                          "SHIPPING_ADDRESS_COUNTRY_CODE"   => '',
+                          "SHIPPINGCOST"            => "",
+                          "PHONE_NO"                => '', 
+                          "MREF1"                   => "",
+                          "MREF2"                   => "",     
+                          "MREF3"                   => "",
+                          "MREF4"                   => "",
+                          "MREF5"                   => "",
+                          "MREF6"                   => "",
+                          "MREF7"                   => "",
+                          "MREF8"                   => "",
+                          "MREF9"                   => "",
+                          "MREF10"                  => "",
+                          "MPARAM1"                 => "",
+                          "MPARAM2"                 => "",
+                          "CUSTOMER_REF"            => "",
+                          "FRISK1"                    => "", 
+                          "FRISK2"                    => "", 
+                          "LANG"                    => "", 
+                          "DOMICILE_ADDRESS"        => "",
+                          "DOMICILE_ADDRESS_CITY"        => "",
+                          "DOMICILE_ADDRESS_REGION"        => "",
+                          "DOMICILE_ADDRESS_STATE"        => "",
+                          "DOMICILE_ADDRESS_POSCODE"        => "",
+                          "DOMICILE_ADDRESS_COUNTRY_CODE"        => "",
+                          "DOMICILE_PHONE_NO"        => "",
+                          "handshake_url"        => "",
+                          "handshake_param"        => "",
                                               
             );
 
