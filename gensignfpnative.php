@@ -24,7 +24,7 @@
             var min = (mm<10)?'0'+mm:mm;
             var sec = (ss<10)?'0'+ss:ss;
             
-            form.bill_no.value = year+month+day+hour+min+sec;
+            form.order_id.value = year+month+day+hour+min+sec;
         }
     </script>
 </head>
