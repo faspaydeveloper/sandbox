@@ -39,7 +39,7 @@
                 </header>
                 <br/>
                 <p align="left">
-                    <b>This is the payment test page for integrating to Post Data Transaction:</b>
+                    <b>This is the payment test page for integrating to 'Post Data Transaction':</b>
                 </p>
                 <br/>
 
