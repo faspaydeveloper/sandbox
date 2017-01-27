@@ -76,13 +76,6 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Request</td>
-                            <td></td>
-                            <td>
-                                <input type="text" name="request" value="" class="form-control" required>
-                            </td>
-                        </tr>
-                        <tr>
                             <td>Bill Desc</td>
                             <td></td>
                             <td>
