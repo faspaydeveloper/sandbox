@@ -51,7 +51,7 @@
     $signature = sha1(md5($str));
 
     $bodie  = "&lt;faspay&gt;<br/>";
-    $bodie  .= "&lt;request&gt;".$_POST['request']."&lt;/request&gt;<br/>";
+    $bodie  .= "&lt;request&gt;Post Data Transaction&lt;/request&gt;<br/>";
     $bodie  .= "&lt;merchant_id&gt;".$_POST['merchant_id']."&lt;/merchant_id&gt;<br/>";
     $bodie  .= "&lt;merchant&gt;".$_POST['merchant_name']."&lt;/merchant&gt;<br/>";
     $bodie  .= "&lt;bill_no&gt;".$_POST['bill_no']."&lt;/bill_no&gt;<br/>";
@@ -98,7 +98,7 @@
     $bodie  .= "&lt;/faspay&gt;<br/>";
     
     $body  = "<faspay><br/>";
-    $body  .= "<request>".$_POST['request']."</request><br/>";
+    $body  .= "<request>Post Data Transaction</request><br/>";
     $body  .= "<merchant_id>".$_POST['merchant_id']."</merchant_id><br/>";
     $body  .= "<merchant>".$_POST['merchant_name']."</merchant><br/>";
     $body  .= "<bill_no>".$_POST['bill_no']."</bill_no><br/>";
