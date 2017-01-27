@@ -15,7 +15,7 @@
                 </header>
                 <br/>
                 <p align="left">
-                    <b>This is the payment test page for integrating to Notification Payment:</b>
+                    <b>This is the payment test page for integrating to 'Notification Payment':</b>
                 </p>
                 <br/>
 
